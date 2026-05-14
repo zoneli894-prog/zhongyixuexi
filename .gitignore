@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.env
+# 前端依赖
+frontend/node_modules/
+frontend/dist/
+
+# 后端依赖与环境
+backend/__pycache__/
+backend/venv/
+backend/.venv/
+backend/*.pyc
+
+# IDE 与系统文件
+.claude/
+.vscode/
+.DS_Store
+
+# 敏感信息
+.env

@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-tcm-bg text-tcm-dark font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-tcm-surface rounded-lg shadow-sm border border-gray-100 p-5 transition-all duration-200;
+  }
+  .card:hover {
+    @apply shadow-md -translate-y-0.5;
+  }
+  .badge {
+    @apply inline-block px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-taste {
+    @apply bg-amber-50 text-amber-700 border border-amber-200;
+  }
+  .badge-nature {
+    @apply bg-blue-50 text-blue-700 border border-blue-200;
+  }
+  .badge-channel {
+    @apply bg-green-50 text-green-700 border border-green-200;
+  }
+  .btn-primary {
+    @apply bg-tcm-primary text-white px-4 py-2 rounded-md hover:bg-red-800 transition-colors font-medium;
+  }
+  .btn-accent {
+    @apply bg-tcm-accent text-white px-4 py-2 rounded-md hover:bg-green-800 transition-colors font-medium;
+  }
+}
+
+/* Flip card animation */
+.flip-card {
+  perspective: 1000px;
+}
+.flip-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F5DC;
+}
+::-webkit-scrollbar-thumb {
+  background: #8B7D6B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6B5B4F;
+}
