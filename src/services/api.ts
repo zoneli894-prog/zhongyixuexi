@@ -1,6 +1,6 @@
 import type { Herb, Formula, Meridian, Syndrome, Disease, Microbe, ClinicalCase } from '../types';
 
-const BASE = '/api';
+const BASE = 'https://zhongyixuexi-production.up.railway.app/api';
 
 async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(`${BASE}${url}`);
